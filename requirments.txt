@@ -1,1 +1,3 @@
+magicinvoke
 setuptools-git-versioning
+eot-build
