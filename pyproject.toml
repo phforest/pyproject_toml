@@ -1,6 +1,6 @@
 [build-system]
 requires = [ "setuptools>=41", "wheel", "setuptools-git-versioning<2", ]
-build-backend = "setuptools.build_meta:__legacy__"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "wow-test-project"
@@ -15,6 +15,9 @@ where = ["src"]
 
 [tool.setuptools-git-versioning]
 enabled = true
-template = "{tag}"
+
+
+
+#template = "2023.{tag}"
 #dev_template = "{tag}.dev{ccount}"
 #tag_formatter = "util:format_tag_name"
