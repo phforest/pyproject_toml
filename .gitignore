@@ -1,1 +1,4 @@
 env
+src/wow_test_project.egg-info
+dist
+__pycache__
