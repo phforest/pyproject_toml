@@ -18,6 +18,6 @@ enabled = true
 
 
 
-#template = "2023.{tag}"
+template = "{tag}"
 dev_template = "{tag}.dev{ccount}"
 dirty_template = "{tag}.b{ccount}"
