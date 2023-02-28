@@ -19,5 +19,6 @@ enabled = true
 
 
 #template = "2023.{tag}"
-#dev_template = "{tag}.dev{ccount}"
+dev_template = "Dev{tag}.dev{ccount}"
+dirty_template = "{tag}.b{ccount}"
 #tag_formatter = "util:format_tag_name"
