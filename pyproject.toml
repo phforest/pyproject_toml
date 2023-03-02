@@ -8,7 +8,7 @@ description = "wow test project"
 dynamic = ["version"]
 
 [tool.setuptools.packages.find]
-where = ["src"]
+include = ["eot*"]
 
 [tool.setuptools.package-data]
 "eot.test" = ["*.txt", "*.rst"]
@@ -16,8 +16,3 @@ where = ["src"]
 [tool.setuptools-git-versioning]
 enabled = true
 
-
-
-template = "{tag}"
-dev_template = "{tag}.dev{ccount}"
-dirty_template = "{tag}.b{ccount}"
