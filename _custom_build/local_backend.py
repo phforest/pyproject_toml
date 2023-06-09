@@ -6,7 +6,13 @@ from packaging.version import Version
 from pathlib import Path
 from setuptools_scm import get_version
 
-__version__ = get_version()
+
+def clean_version(version):
+    if "dev" in version:
+        return version.split("+")[0]
+
+
+__version__ = clean_version(get_version())
 
 # __version__ = get_version(Path(__file__).parent.parent)
 
