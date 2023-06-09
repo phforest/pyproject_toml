@@ -4,3 +4,4 @@ dist
 __pycache__
 pypirc
 wow_test_project.egg-info
+.vscode

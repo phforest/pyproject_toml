@@ -1,23 +1,15 @@
 from invoke import task
 from pathlib import Path
-import sys
-import shutil
+from subprocess import run
 
-sys.path.append(f"{Path(__file__).parent.parent.resolve()}/core-build-py")
-sys.path.append(f"{Path(__file__).resolve().parent}")
-import eot.build.bootstrap
-import eot.build.tasks
-
-
-ns = eot.build.tasks.load()
 
 this_dir = Path(__file__).parent
 
 
-def repo_version():
-    from eot.build.deploy import get_version
+# def repo_version():
+#     from eot.build.deploy import get_version
 
-    return get_version(this_dir)
+#     return get_version(this_dir)
 
 
 @task()
@@ -25,11 +17,9 @@ def build(context):
     """
     Build the library
     """
-    with context.cd(str(this_dir)):
-        context.run("python -m build")
+    # run("python -m build" , cwd=str(this_dir), check=True, shell=True)
+    context.run("python3 -m build")
 
-
-ns.add_task(build)
 
 @task()
 def clean(context):
@@ -47,18 +37,4 @@ def clean(context):
 
         shutil.rmtree(this_dir / "var", ignore_errors=True)
 
-
-ns.add_task(clean)
-
-
-@task()
-def deploy(context, build="wheel"):
-    """
-    Deploy eot-wowool-sdk Python package to Nexus build types are ['wheel' , 'source']
-    """
-    from eot.build.deploy import upload_dist_folder
-
-    upload_dist_folder(context, this_dir, "wow*test*project")
-
-ns.add_task(deploy)
 
