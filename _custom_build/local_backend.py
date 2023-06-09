@@ -10,6 +10,7 @@ from setuptools_scm import get_version
 def clean_version(version):
     if "dev" in version:
         return version.split("+")[0]
+    return version
 
 
 __version__ = clean_version(get_version())
