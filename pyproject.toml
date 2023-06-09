@@ -10,6 +10,8 @@ dynamic = ["version"]
 [tool.setuptools.packages.find]
 include = ["eot*"]
 
+[tool.setuptools_scm]
+
 [tool.setuptools.package-data]
 "eot.test" = ["*.txt", "*.rst"]
 
