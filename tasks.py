@@ -38,3 +38,10 @@ def clean(context):
         shutil.rmtree(this_dir / "var", ignore_errors=True)
 
 
+@task
+def version(_):
+    from eot.build.git import get_version
+    from pathlib import Path
+
+    __version__ = get_version(Path(__file__).parent)
+    print(f"======>>>>>>>>{__version__=}")
