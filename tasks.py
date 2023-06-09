@@ -26,6 +26,8 @@ def clean(context):
     """
     Clean the build
     """
+    import shutil
+
     with context.cd(this_dir):
         print(f"{this_dir = }")
         shutil.rmtree(this_dir / "dist", ignore_errors=True)
@@ -44,4 +46,4 @@ def version(_):
     from pathlib import Path
 
     __version__ = get_version(Path(__file__).parent)
-    print(f"==!!! 2.0.1 + 1 ====>>>>>>>>{__version__=}")
+    print(f"==!!! 2.0.1 + 2 ====>>>>>>>>{__version__=}")
