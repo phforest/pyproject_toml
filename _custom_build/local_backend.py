@@ -1,8 +1,12 @@
 from setuptools import build_meta as _orig
 from setuptools.build_meta import *
 from packaging.version import Version
-from eot.build.git import get_version
+
+# from eot.build.git import get_version
 from pathlib import Path
+from setuptools_scm import get_version
+
+__version__ = get_version(root="..", relative_to=__file__)
 
 # __version__ = get_version(Path(__file__).parent.parent)
 

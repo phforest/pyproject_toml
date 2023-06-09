@@ -13,5 +13,7 @@ include = ["eot*"]
 [tool.setuptools.package-data]
 "eot.test" = ["*.txt", "*.rst"]
 
-[tool.setuptools_scm]
-version_scheme="python-simplified-semver"
+
+
+[tool.setuptools.dynamic]
+version = {attr = "_custom_build.local_backend.__version__"}
