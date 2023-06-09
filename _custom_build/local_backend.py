@@ -6,7 +6,7 @@ from packaging.version import Version
 from pathlib import Path
 from setuptools_scm import get_version
 
-__version__ = get_version(root="..", relative_to=__file__)
+__version__ = get_version(root="..", relative_to=str(Path(__file__).parent))
 
 # __version__ = get_version(Path(__file__).parent.parent)
 
