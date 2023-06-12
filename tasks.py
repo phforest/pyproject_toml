@@ -45,5 +45,10 @@ def version(_):
     from eot.build.git import get_version
     from pathlib import Path
 
-    __version__ = get_version(Path(__file__).parent)
-    print(f"==!!! +test ====>>>>>>>>{__version__=}")
+    version_eot = get_version(Path(__file__).parent)
+    print(f"==core-build====>>>>>>>>{version_eot=}")
+
+    from setuptools_scm import get_version as get_version_scm
+
+    version_scm = get_version_scm(Path(__file__).parent)
+    print(f"===version_scm===>>>>>>>>{version_scm=}")
