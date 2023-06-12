@@ -46,9 +46,9 @@ def version(_):
     from pathlib import Path
 
     version_eot = get_version(Path(__file__).parent)
-    print(f"==core-build=+ 4===>>>>>>>>{version_eot=}")
+    print(f"==core-build=+ 5===>>>>>>>>{version_eot=}")
 
     from setuptools_scm import get_version as get_version_scm
 
     version_scm = get_version_scm(Path(__file__).parent)
-    print(f"===version_scm + 4===>>>>>>>>{version_scm=}")
+    print(f"===version_scm + 5===>>>>>>>>{version_scm=}")
