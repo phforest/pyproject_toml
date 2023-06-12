@@ -46,4 +46,4 @@ def version(_):
     from pathlib import Path
 
     __version__ = get_version(Path(__file__).parent)
-    print(f"==!!! 2.0.2 + dev0 ====>>>>>>>>{__version__=}")
+    print(f"==!!! 2.0.2 +changes ====>>>>>>>>{__version__=}")
